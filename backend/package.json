@@ -1,0 +1,19 @@
+{
+  "name": "nh-crawler",
+  "version": "1.0.0",
+  "description": "why did I even do this",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lapor Chen",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "nhentai-js": "^4.0.0",
+    "node-html-parser": "^5.2.0"
+  }
+}
