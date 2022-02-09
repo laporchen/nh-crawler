@@ -14,13 +14,6 @@ import pageComponent from "./components/pages.vue";
 export default {
 	name: "App",
 	components: { Nav, pageComponent },
-	data() {
-		return {
-			images: [],
-			number: null,
-		};
-	},
-	methods: {},
 };
 </script>
 
