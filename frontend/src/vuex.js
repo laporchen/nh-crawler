@@ -22,6 +22,7 @@ const store = createStore({
             pages: [],
             id: null,
             page_setting: 2,
+            hide: false, // if someone walks in
         }
     },
     getters: {
@@ -33,7 +34,10 @@ const store = createStore({
         },
         getPageSetting: state => {
             return state.page_setting;
-        }
+        },
+        getHide: state => {
+            return state.hide;
+        },
     },
     actions: {
         setPages(context, id) {
@@ -44,6 +48,9 @@ const store = createStore({
         },
         setView(context, mode) {
             context.commit('setView', mode);
+        },
+        setHide(context) {
+            context.commit('setHide');
         }
     },
     mutations: {
@@ -70,7 +77,6 @@ const store = createStore({
                 const tags = response.data.details.tags;
                 blacklist.forEach((element) => {
                     if (tags.includes(element)) {
-                        console.log("This no gud");
                         this.setRandom(state);
                         return;
                     }
@@ -81,7 +87,10 @@ const store = createStore({
         },
         setView(state, mode) {
             state.page_setting = mode;
-        }
+        },
+        setHide(state) {
+            state.hide = !state.hide;
+        },
     }
 })
 
