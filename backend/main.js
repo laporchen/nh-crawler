@@ -8,7 +8,10 @@ const port = 3000;
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
-app.use(cors());
+app.use(cors({
+    origin: "https://nhc.lapor-chen.com"
+}
+));
 app.use(urlencoded({ extended: true }));
 app.use(json());
 app.get('/random', (req, res) => {

@@ -1,5 +1,5 @@
 <template>
-	<div id="app">
+	<div id="app" :style="{ backgroundColor: color}">
 		<div class="container">
 			<Nav />
 			<div class="page-wrapper">
@@ -14,6 +14,11 @@ import pageComponent from "./components/pages.vue";
 export default {
 	name: "App",
 	components: { Nav, pageComponent },
+	data() {
+		return {
+			color: "#5665a6"
+		};
+	}
 };
 </script>
 
@@ -24,7 +29,6 @@ export default {
 	box-sizing: border-box;
 }
 body {
-	background-color: #5665a6;
 	min-height: 100vh;
 	display: flex;
 }
